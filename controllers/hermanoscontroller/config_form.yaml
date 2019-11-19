@@ -1,0 +1,10 @@
+name: HermanosController
+form: $/luismayta/coordinacion/models/hermanos/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Hermanos
+defaultRedirect: luismayta/coordinacion/hermanoscontroller
+create:
+    redirect: 'luismayta/coordinacion/hermanoscontroller/update/:id'
+    redirectClose: luismayta/coordinacion/hermanoscontroller
+update:
+    redirect: luismayta/coordinacion/hermanoscontroller
+    redirectClose: luismayta/coordinacion/hermanoscontroller

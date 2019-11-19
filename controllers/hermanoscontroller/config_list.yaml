@@ -1,0 +1,12 @@
+list: $/luismayta/coordinacion/models/hermanos/columns.yaml
+modelClass: LuisMayta\Coordinacion\Models\Hermanos
+title: HermanosController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'luismayta/coordinacion/hermanoscontroller/update/:id'

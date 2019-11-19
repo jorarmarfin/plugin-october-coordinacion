@@ -1,0 +1,10 @@
+columns:
+    fecha:
+        label: Fecha
+        type: date
+    tipo:
+        label: 'Tipo de reunion'
+        type: text
+    asunto:
+        label: Asunto
+        type: text

@@ -1,0 +1,24 @@
+fields:
+    tipo:
+        label: 'Tipo de reunion'
+        options:
+            capilla: Capilla
+            zonal: Zonal
+            servidores: Servidores
+        showSearch: true
+        span: left
+        type: dropdown
+    fecha:
+        label: Fecha
+        mode: date
+        span: auto
+        type: datepicker
+    asunto:
+        label: Asunto
+        span: full
+        type: text
+    descripcion:
+        label: Descripcion
+        size: large
+        span: full
+        type: richeditor

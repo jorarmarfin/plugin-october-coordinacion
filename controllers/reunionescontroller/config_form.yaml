@@ -1,0 +1,10 @@
+name: ReunionesController
+form: $/luismayta/coordinacion/models/reuniones/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Reuniones
+defaultRedirect: luismayta/coordinacion/reunionescontroller
+create:
+    redirect: 'luismayta/coordinacion/reunionescontroller/update/:id'
+    redirectClose: luismayta/coordinacion/reunionescontroller
+update:
+    redirect: luismayta/coordinacion/reunionescontroller
+    redirectClose: luismayta/coordinacion/reunionescontroller

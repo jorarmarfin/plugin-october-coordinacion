@@ -1,6 +1,6 @@
 <?php return [
     'plugin' => [
-        'name' => 'Coordinacion',
-        'description' => ''
-    ]
+        'name' => 'Coordination',
+        'description' => 'Manage a prayer group',
+    ],
 ];

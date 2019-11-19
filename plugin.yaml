@@ -4,3 +4,13 @@ plugin:
     author: 'Luis Mayta'
     icon: oc-icon-users
     homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Grupo oracion'
+        url: luismayta/coordinacion/hermanoscontroller
+        icon: icon-users
+        sideMenu:
+            side-menu-item:
+                label: Reuniones
+                url: luismayta/coordinacion/reunionescontroller
+                icon: icon-building

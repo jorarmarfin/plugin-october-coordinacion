@@ -1,0 +1,53 @@
+tabs:
+    fields:
+        apellidos:
+            label: Apellidos
+            span: left
+            type: text
+            tab: 'Datos personales'
+        nombres:
+            label: Nombres
+            span: right
+            type: text
+            tab: 'Datos personales'
+        fecha_nacimiento:
+            label: 'Fecha Nacimiento'
+            mode: date
+            span: left
+            type: datepicker
+            tab: 'Datos personales'
+        inicio_go:
+            label: 'Año de Inicio en el Grupo'
+            span: right
+            type: text
+            tab: 'Datos personales'
+        telefonos:
+            label: Telefono
+            span: left
+            type: text
+            tab: 'Datos personales'
+        ocupacion:
+            label: Ocupacion
+            span: right
+            type: text
+            tab: 'Datos personales'
+        estado_civil:
+            label: 'Estado Civil'
+            options:
+                soltero: Soltero
+                casado: Casado
+            showSearch: true
+            span: left
+            type: dropdown
+            tab: 'Datos personales'
+        email:
+            label: Email
+            span: right
+            type: text
+            tab: 'Datos personales'
+        direccion:
+            label: Direccion
+            size: large
+            span: full
+            type: textarea
+            tab: 'Datos personales'

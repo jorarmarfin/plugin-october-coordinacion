@@ -1,0 +1,7 @@
+columns:
+    apellidos:
+        label: Apellidos
+        type: text
+    nombres:
+        label: Nombres
+        type: text

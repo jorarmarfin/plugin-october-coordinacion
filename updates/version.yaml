@@ -1,2 +1,17 @@
 1.0.1:
-    - Initialize plugin.
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Drop table luismayta_coordinacion_evento'
+    - builder_table_delete_luismayta_coordinacion_evento.php
+1.0.3:
+    - 'Drop table luismayta_coordinacion_hermanos'
+    - builder_table_delete_luismayta_coordinacion_hermanos.php
+1.0.4:
+    - 'Drop table luismayta_coordinacion_reunion'
+    - builder_table_delete_luismayta_coordinacion_reunion.php
+1.0.5:
+    - 'Created table luismayta_coordinacion_hermanos'
+    - builder_table_create_luismayta_coordinacion_hermanos.php
+1.0.6:
+    - 'Created table luismayta_coordinacion_reuniones'
+    - builder_table_create_luismayta_coordinacion_reuniones.php
