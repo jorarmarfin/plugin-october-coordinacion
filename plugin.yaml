@@ -14,3 +14,7 @@ navigation:
                 label: Reuniones
                 url: luismayta/coordinacion/reunionescontroller
                 icon: icon-building
+            side-menu-item2:
+                label: Eventos
+                url: luismayta/coordinacion/eventoscontroller
+                icon: icon-calendar

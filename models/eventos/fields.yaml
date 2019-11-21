@@ -1,0 +1,25 @@
+fields:
+    titulo:
+        label: Titulo
+        span: left
+        type: text
+    fecha:
+        label: Fecha
+        mode: date
+        span: auto
+        type: datepicker
+    tipo:
+        label: Tipo
+        options:
+            capilla: Capilla
+            zona: Zona
+            parroquia: Parroquia
+            rcc: RCC
+        showSearch: true
+        span: auto
+        type: dropdown
+    descripcion:
+        label: Descripcion
+        size: large
+        span: full
+        type: richeditor

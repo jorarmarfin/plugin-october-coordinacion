@@ -15,3 +15,12 @@
 1.0.6:
     - 'Created table luismayta_coordinacion_reuniones'
     - builder_table_create_luismayta_coordinacion_reuniones.php
+1.0.7:
+    - 'Updated table luismayta_coordinacion_hermanos'
+    - builder_table_update_luismayta_coordinacion_hermanos.php
+1.0.8:
+    - 'Created table luismayta_coordinacion_eventos'
+    - builder_table_create_luismayta_coordinacion_eventos.php
+1.0.9:
+    - 'Updated table luismayta_coordinacion_eventos'
+    - builder_table_update_luismayta_coordinacion_eventos.php

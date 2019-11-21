@@ -5,3 +5,6 @@ columns:
     nombres:
         label: Nombres
         type: text
+    fecha_nacimiento:
+        label: 'Fecha nacimiento'
+        type: date

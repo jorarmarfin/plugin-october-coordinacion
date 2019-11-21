@@ -1,0 +1,10 @@
+name: EventosController
+form: $/luismayta/coordinacion/models/eventos/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Eventos
+defaultRedirect: luismayta/coordinacion/eventoscontroller
+create:
+    redirect: 'luismayta/coordinacion/eventoscontroller/update/:id'
+    redirectClose: luismayta/coordinacion/eventoscontroller
+update:
+    redirect: luismayta/coordinacion/eventoscontroller
+    redirectClose: luismayta/coordinacion/eventoscontroller

@@ -1,0 +1,10 @@
+columns:
+    fecha:
+        label: Fecha
+        type: date
+    tipo:
+        label: Tipo
+        type: text
+    titulo:
+        label: Titulo
+        type: text
