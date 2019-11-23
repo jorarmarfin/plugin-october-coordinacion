@@ -1,0 +1,6 @@
+fields:
+    fecha:
+        label: Fecha
+        mode: datetime
+        span: auto
+        type: datepicker
