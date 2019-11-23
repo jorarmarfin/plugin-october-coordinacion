@@ -24,3 +24,6 @@
 1.0.9:
     - 'Updated table luismayta_coordinacion_eventos'
     - builder_table_update_luismayta_coordinacion_eventos.php
+1.0.10:
+    - 'Created table luismayta_coordinacion_sabado'
+    - builder_table_create_luismayta_coordinacion_sabado.php
