@@ -15,6 +15,9 @@ class Plugin extends PluginBase
     }
     public function registerComponents()
     {
+        return [
+            'LuisMayta\Coordinacion\Components\GetReuniones' => 'MisReuniones',
+        ];
     }
 
     public function registerSettings()
