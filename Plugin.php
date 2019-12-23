@@ -16,7 +16,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'LuisMayta\Coordinacion\Components\GetReuniones' => 'MisReuniones',
+            'LuisMayta\Coordinacion\Components\ObtieneEntidades' => 'ObtieneEntidades',
+            'LuisMayta\Coordinacion\Components\DetalleEntidades' => 'DetalleEntidades',
         ];
     }
 
