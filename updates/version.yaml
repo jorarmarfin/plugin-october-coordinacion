@@ -27,3 +27,6 @@
 1.0.10:
     - 'Created table luismayta_coordinacion_sabado'
     - builder_table_create_luismayta_coordinacion_sabado.php
+1.0.11:
+    - 'Created table luismayta_coordinacion_tareas'
+    - builder_table_create_luismayta_coordinacion_tareas.php
