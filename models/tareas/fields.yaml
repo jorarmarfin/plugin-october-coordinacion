@@ -1,0 +1,16 @@
+fields:
+    accion:
+        label: Accion
+        span: auto
+        type: text
+    fecha:
+        label: Fecha
+        mode: datetime
+        span: auto
+        type: datepicker
+    idhermano:
+        label: Responsable
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation

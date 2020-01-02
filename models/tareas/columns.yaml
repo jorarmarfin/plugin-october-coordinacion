@@ -1,0 +1,10 @@
+columns:
+    accion:
+        label: Accion
+        type: text
+    fecha:
+        label: Fecha
+        type: date
+    idhermano:
+        label: Hermano
+        type: text
