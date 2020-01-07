@@ -10,6 +10,10 @@ navigation:
         url: luismayta/coordinacion/hermanoscontroller
         icon: icon-users
         sideMenu:
+            side-menu-item6:
+                label: Hermanos
+                url: luismayta/coordinacion/hermanoscontroller
+                icon: icon-users
             side-menu-item:
                 label: Reuniones
                 url: luismayta/coordinacion/reunionescontroller
