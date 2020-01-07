@@ -1,16 +1,15 @@
 fields:
-    accion:
-        label: Accion
+    asunto:
+        label: Asunto
         span: auto
         type: text
     fecha:
         label: Fecha
-        mode: datetime
+        mode: date
         span: auto
         type: datepicker
-    idhermano:
-        label: Responsable
-        nameFrom: name
-        descriptionFrom: description
-        span: auto
-        type: relation
+    descripcion:
+        label: Descripcion
+        size: large
+        span: full
+        type: richeditor

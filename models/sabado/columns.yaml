@@ -2,6 +2,6 @@ columns:
     fecha:
         label: Fecha
         type: date
-    asunto:
-        label: Asunto
+    tema:
+        label: Tema
         type: text

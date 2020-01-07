@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Hermanos extends Model
+class Aportes extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -19,24 +19,11 @@ class Hermanos extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'luismayta_coordinacion_hermanos';
+    public $table = 'luismayta_coordinacion_aportes';
 
     /**
      * @var array Validation rules
      */
     public $rules = [
     ];
-    /**
-     * Avatares
-     */
-    public $attachOne = [
-        'foto' => 'System\Models\File'
-    ];
-    /**
-     * Accessors
-     */
-    public function getNombreCompletoAttribute()
-    {
-        return $this->nombres.' '.$this->apellidos;
-    }
 }

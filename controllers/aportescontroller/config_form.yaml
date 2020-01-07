@@ -1,0 +1,10 @@
+name: AportesController
+form: $/luismayta/coordinacion/models/aportes/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Aportes
+defaultRedirect: luismayta/coordinacion/aportescontroller
+create:
+    redirect: 'luismayta/coordinacion/aportescontroller/update/:id'
+    redirectClose: luismayta/coordinacion/aportescontroller
+update:
+    redirect: luismayta/coordinacion/aportescontroller
+    redirectClose: luismayta/coordinacion/aportescontroller

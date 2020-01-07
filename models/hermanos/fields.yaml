@@ -51,3 +51,15 @@ tabs:
             span: full
             type: textarea
             tab: 'Datos personales'
+        foto:
+            label: Foto
+            mode: image
+            imageWidth: '300'
+            imageHeight: '400'
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Foto

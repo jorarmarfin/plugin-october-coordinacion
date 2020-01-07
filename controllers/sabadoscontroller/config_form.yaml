@@ -1,0 +1,10 @@
+name: SabadosController
+form: $/luismayta/coordinacion/models/sabado/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Sabado
+defaultRedirect: luismayta/coordinacion/sabadoscontroller
+create:
+    redirect: 'luismayta/coordinacion/sabadoscontroller/update/:id'
+    redirectClose: luismayta/coordinacion/sabadoscontroller
+update:
+    redirect: luismayta/coordinacion/sabadoscontroller
+    redirectClose: luismayta/coordinacion/sabadoscontroller

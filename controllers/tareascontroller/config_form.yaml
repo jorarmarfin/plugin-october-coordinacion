@@ -1,0 +1,10 @@
+name: TareasController
+form: $/luismayta/coordinacion/models/tareas/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Tareas
+defaultRedirect: luismayta/coordinacion/tareascontroller
+create:
+    redirect: 'luismayta/coordinacion/tareascontroller/update/:id'
+    redirectClose: luismayta/coordinacion/tareascontroller
+update:
+    redirect: luismayta/coordinacion/tareascontroller
+    redirectClose: luismayta/coordinacion/tareascontroller

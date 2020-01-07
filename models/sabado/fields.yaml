@@ -1,6 +1,17 @@
 fields:
     fecha:
         label: Fecha
-        mode: datetime
+        mode: date
         span: auto
         type: datepicker
+    tema:
+        label: Tema
+        size: ''
+        span: full
+        type: richeditor
+    informes:
+        label: Informes
+        size: large
+        mode: tab
+        span: auto
+        type: markdown

@@ -18,3 +18,15 @@ navigation:
                 label: Eventos
                 url: luismayta/coordinacion/eventoscontroller
                 icon: icon-calendar
+            side-menu-item3:
+                label: Tareas
+                url: luismayta/coordinacion/tareascontroller
+                icon: icon-tasks
+            side-menu-item4:
+                label: Sabados
+                url: luismayta/coordinacion/sabadoscontroller
+                icon: icon-home
+            side-menu-item5:
+                label: Aportes
+                url: luismayta/coordinacion/aportescontroller
+                icon: icon-dollar

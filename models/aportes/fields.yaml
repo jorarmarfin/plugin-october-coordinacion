@@ -1,0 +1,24 @@
+fields:
+    fecha:
+        label: Fecha
+        mode: date
+        span: auto
+        type: datepicker
+    tipo:
+        label: 'Tipo de aporte'
+        options:
+            capilla: Capilla
+            rcc: Rcc
+        showSearch: true
+        span: auto
+        type: dropdown
+    aporte:
+        label: Aporte
+        span: full
+        type: text
+    descripcion:
+        label: Descripcion
+        size: large
+        mode: tab
+        span: auto
+        type: markdown
