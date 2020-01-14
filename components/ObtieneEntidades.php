@@ -30,12 +30,18 @@ class ObtieneEntidades extends ComponentBase
 
         return $obj::get();
     }
-    public function ModeloPorMes()
+    public function ModeloPorMes($t='n')
     {
         $modelo = $this->property('Modelo');
         $instancia = trim("LuisMayta\Coordinacion\Models\ ").$modelo;
         $obj=new $instancia;
-
-        return $obj::get();
+        $mes = date('m');
+        $retVal = ($t=='h') ? 'fecha_nacimiento' : 'fecha' ;
+        $tmp = $obj::whereMonth($retVal,$mes);
+        $data = [
+            'data'=>$tmp->get(),
+            'mes'=>$tmp->first()
+        ];
+        return $data;
     }
 }

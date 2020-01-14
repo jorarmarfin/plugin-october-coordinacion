@@ -15,6 +15,7 @@ fields:
             zona: Zona
             parroquia: Parroquia
             rcc: RCC
+            emanuel: Emanuel
         showSearch: true
         span: auto
         type: dropdown
