@@ -1,0 +1,22 @@
+fields:
+    fecha:
+        label: Fecha
+        mode: date
+        span: auto
+        type: datepicker
+    hermano:
+        label: Hermano
+        nameFrom: nombres
+        descriptionFrom: description
+        span: auto
+        type: relation
+    estado:
+        label: Estado
+        options:
+            A: A
+            F: F
+            T: T
+            J: J
+        showSearch: true
+        span: auto
+        type: dropdown

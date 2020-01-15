@@ -48,3 +48,6 @@
 1.0.17:
     - 'Updated table luismayta_coordinacion_aportes'
     - builder_table_update_luismayta_coordinacion_aportes_2.php
+1.0.18:
+    - 'Created table luismayta_coordinacion_asistencias'
+    - builder_table_create_luismayta_coordinacion_asistencias.php

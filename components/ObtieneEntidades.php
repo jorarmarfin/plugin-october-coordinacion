@@ -1,6 +1,7 @@
 <?php namespace LuisMayta\Coordinacion\Components;
 
 use Cms\Classes\ComponentBase;
+use LuisMayta\Coordinacion\Models\Asistencias;
 
 class ObtieneEntidades extends ComponentBase
 {
@@ -43,5 +44,12 @@ class ObtieneEntidades extends ComponentBase
             'mes'=>$tmp->first()
         ];
         return $data;
+    }
+    public function TotalAsistencia()
+    {
+        // $asistencia = Asistencias::select('department', Db::raw('SUM(price) as total_sales'))
+        //                          ->groupBy('idhermano')
+        // return $data;
+        return 'por hacer';
     }
 }

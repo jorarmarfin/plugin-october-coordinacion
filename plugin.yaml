@@ -34,3 +34,7 @@ navigation:
                 label: Aportes
                 url: luismayta/coordinacion/aportescontroller
                 icon: icon-dollar
+            side-menu-item7:
+                label: Asistencias
+                url: luismayta/coordinacion/asistenciascontroller
+                icon: icon-adn

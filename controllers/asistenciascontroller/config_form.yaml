@@ -1,0 +1,10 @@
+name: AsistenciasController
+form: $/luismayta/coordinacion/models/asistencias/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Asistencias
+defaultRedirect: luismayta/coordinacion/asistenciascontroller
+create:
+    redirect: 'luismayta/coordinacion/asistenciascontroller/update/:id'
+    redirectClose: luismayta/coordinacion/asistenciascontroller
+update:
+    redirect: luismayta/coordinacion/asistenciascontroller
+    redirectClose: luismayta/coordinacion/asistenciascontroller
