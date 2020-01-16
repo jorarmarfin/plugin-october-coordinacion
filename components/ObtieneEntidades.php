@@ -1,6 +1,8 @@
 <?php namespace LuisMayta\Coordinacion\Components;
 
 use Cms\Classes\ComponentBase;
+use Illuminate\Support\Facades\DB;
+use LuisMayta\Coordinacion\Models\Hermanos;
 use LuisMayta\Coordinacion\Models\Asistencias;
 
 class ObtieneEntidades extends ComponentBase
@@ -50,6 +52,21 @@ class ObtieneEntidades extends ComponentBase
         // $asistencia = Asistencias::select('department', Db::raw('SUM(price) as total_sales'))
         //                          ->groupBy('idhermano')
         // return $data;
+        $t_hermanos = 'luismayta_coordinacion_hermanos';
+        $t_asistencias = 'luismayta_coordinacion_asistencias';
+        $asistencias = Hermanos::select('nombres',DB::raw('count("a.estado") as asistencia'),DB::raw('count("f.estado") as faltas'));
+
+        //$asistencias->join($t_asistencias.' as a', 'a.idhermano', '=', $t_hermanos.'.id');
+        $asistencias->leftJoin("{$t_asistencias} as f", function ($join) use($t_hermanos) {
+            $join->on($t_hermanos.'.id', '=', 'f.idhermano')
+                ->where('f.estado', '=', 'F');
+        });
+        $asistencias->leftJoin("{$t_asistencias} as a", function ($join) use($t_hermanos) {
+            $join->on($t_hermanos.'.id', '=', 'a.idhermano')
+                ->where('a.estado', '=', 'A');
+        });
+        $asistencias->where('nombres','Lucy')->groupBy("{$t_hermanos}.id");
+        dd($asistencias->get());
         return 'por hacer';
     }
 }
