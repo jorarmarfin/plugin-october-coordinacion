@@ -49,24 +49,38 @@ class ObtieneEntidades extends ComponentBase
     }
     public function TotalAsistencia()
     {
-        // $asistencia = Asistencias::select('department', Db::raw('SUM(price) as total_sales'))
-        //                          ->groupBy('idhermano')
-        // return $data;
-        $t_hermanos = 'luismayta_coordinacion_hermanos';
-        $t_asistencias = 'luismayta_coordinacion_asistencias';
-        $asistencias = Hermanos::select('nombres',DB::raw('count("a.estado") as asistencia'),DB::raw('count("f.estado") as faltas'));
+        $query = "select h.nombres,
+        if(r1.cantidad is null,0,r1.cantidad) as asistencias,
+        if(r2.cantidad is null,0,r2.cantidad) as faltas,
+        if(r3.cantidad is null,0,r3.cantidad) as tardanzas,
+        if(r4.cantidad is null,0,r4.cantidad) as justificaciones
+        from luismayta_coordinacion_hermanos as h
+        left join (
+        select idhermano,estado,count(*) as cantidad
+        from luismayta_coordinacion_asistencias 
+        where estado='A'
+        group by idhermano,estado
+        ) as r1 on r1.idhermano=h.id
+        left join (
+        select idhermano,estado,count(*) as cantidad
+        from luismayta_coordinacion_asistencias 
+        where estado='F'
+        group by idhermano,estado
+        ) as r2 on r2.idhermano=h.id
+        left join (
+        select idhermano,estado,count(*) as cantidad
+        from luismayta_coordinacion_asistencias 
+        where estado='T'
+        group by idhermano,estado
+        ) as r3 on r3.idhermano=h.id
+        left join (
+        select idhermano,estado,count(*) as cantidad
+        from luismayta_coordinacion_asistencias 
+        where estado='J'
+        group by idhermano,estado
+        ) as r4 on r4.idhermano=h.id";
 
-        //$asistencias->join($t_asistencias.' as a', 'a.idhermano', '=', $t_hermanos.'.id');
-        $asistencias->leftJoin("{$t_asistencias} as f", function ($join) use($t_hermanos) {
-            $join->on($t_hermanos.'.id', '=', 'f.idhermano')
-                ->where('f.estado', '=', 'F');
-        });
-        $asistencias->leftJoin("{$t_asistencias} as a", function ($join) use($t_hermanos) {
-            $join->on($t_hermanos.'.id', '=', 'a.idhermano')
-                ->where('a.estado', '=', 'A');
-        });
-        $asistencias->where('nombres','Lucy')->groupBy("{$t_hermanos}.id");
-        dd($asistencias->get());
-        return 'por hacer';
+        $asistencias = DB::select($query);
+        return $asistencias;
     }
 }
