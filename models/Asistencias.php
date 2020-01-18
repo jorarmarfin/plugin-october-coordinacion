@@ -32,4 +32,12 @@ class Asistencias extends Model
     public $belongsTo = [
         'hermano' => ['LuisMayta\Coordinacion\Models\Hermanos','key' => 'idhermano']
     ];
+    /**
+     * Scopes
+     */
+    public function scopeResumenAsistencia($query,$id,$estado)
+    {
+        $date = date('Y');
+        return $query->where('idhermano',$id)->whereYear('fecha',$date)->where('estado',$estado);
+    }
 }
