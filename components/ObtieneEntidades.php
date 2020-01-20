@@ -83,4 +83,8 @@ class ObtieneEntidades extends ComponentBase
         $asistencias = DB::select($query);
         return $asistencias;
     }
+    public function RegistrarAsistencia(Type $var = null)
+    {
+        # code...
+    }
 }
