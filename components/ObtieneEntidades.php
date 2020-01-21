@@ -27,13 +27,16 @@ class ObtieneEntidades extends ComponentBase
         ];
     }
 
-    public function Modelo()
+    public function Modelo($paginate=0)
     {
         $modelo = $this->property('Modelo');
         $instancia = trim("LuisMayta\Coordinacion\Models\ ").$modelo;
         $obj=new $instancia;
-
-        return $obj::get();
+        if ($paginate>0) {
+            return $obj::paginate($paginate);
+        } else {
+            return $obj::get();
+        }
     }
     public function ModeloPorMes($t='n')
     {
