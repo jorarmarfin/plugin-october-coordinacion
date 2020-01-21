@@ -1,12 +1,12 @@
 tabs:
     fields:
-        apellidos:
-            label: Apellidos
+        nombres:
+            label: Nombres
             span: left
             type: text
             tab: 'Datos personales'
-        nombres:
-            label: Nombres
+        apellidos:
+            label: Apellidos
             span: right
             type: text
             tab: 'Datos personales'

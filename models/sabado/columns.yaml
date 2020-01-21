@@ -4,4 +4,5 @@ columns:
         type: date
     tema:
         label: Tema
-        type: text
+        type: partial
+        path: ~/plugins/luismayta/coordinacion/models/sabado/_tema_column.htm
