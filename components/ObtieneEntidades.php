@@ -85,16 +85,11 @@ class ObtieneEntidades extends ComponentBase
         $asistencias = DB::select($query);
         return $asistencias;
     }
-    public function CrearAsistencias()
-    {
-        $hermanos = Hermanos::with('asistencias')->get();
-        dd($hermanos[0]->asistencias->estado);
-    }
     public function RegistrarAsistencia($idhermano,$estado)
     {
         $carbon = new Carbon(); 
         $asistencia = Asistencias::firstOrNew([
-                        'fecha'=>$carbon->addDay()->format('Y-m-d'),
+                        'fecha'=>$carbon->format('Y-m-d'),
                         'idhermano'=>$idhermano,
                     ]);
         $asistencia->estado=$estado;
