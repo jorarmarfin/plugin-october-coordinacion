@@ -1,9 +1,9 @@
 columns:
-    apellidos:
-        label: Apellidos
-        type: text
     nombres:
         label: Nombres
+        type: text
+    apellidos:
+        label: Apellidos
         type: text
     fecha_nacimiento:
         label: 'Fecha nacimiento'
