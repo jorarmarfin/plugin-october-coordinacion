@@ -2,6 +2,7 @@ columns:
     nombres:
         label: Nombres
         type: text
+        sortable: true
     apellidos:
         label: Apellidos
         type: text
