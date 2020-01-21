@@ -90,7 +90,6 @@ class Hermanos extends Model
         }
         return $mes;
     }
-
     public function getTDiaAttribute()
     {
         $dt = new Carbon($this->fecha_nacimiento);
@@ -120,4 +119,12 @@ class Hermanos extends Model
         
         return $dia.' '.$dt->day;
     }
+    public function getAsistenciaAttribute()
+    {
+        $carbon = new Carbon(); 
+        $asistencia = Asistencias::select('estado')->where('idhermano',$this->id)->where('fecha',$carbon->addDay()->format('Y-m-d'))->first();
+        $retVal = (is_null($asistencia)) ? '---' : $asistencia->estado;
+        return $retVal;
+    }
+
 }

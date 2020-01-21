@@ -21,6 +21,8 @@ class Asistencias extends Model
      */
     public $table = 'luismayta_coordinacion_asistencias';
 
+    protected $guarded = [];
+
     /**
      * @var array Validation rules
      */

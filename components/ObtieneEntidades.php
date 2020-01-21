@@ -1,7 +1,9 @@
 <?php namespace LuisMayta\Coordinacion\Components;
 
+use Carbon\Carbon;
 use Cms\Classes\ComponentBase;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use LuisMayta\Coordinacion\Models\Hermanos;
 use LuisMayta\Coordinacion\Models\Asistencias;
 
@@ -83,8 +85,20 @@ class ObtieneEntidades extends ComponentBase
         $asistencias = DB::select($query);
         return $asistencias;
     }
-    public function RegistrarAsistencia(Type $var = null)
+    public function CrearAsistencias()
     {
-        # code...
+        $hermanos = Hermanos::with('asistencias')->get();
+        dd($hermanos[0]->asistencias->estado);
+    }
+    public function RegistrarAsistencia($idhermano,$estado)
+    {
+        $carbon = new Carbon(); 
+        $asistencia = Asistencias::firstOrNew([
+                        'fecha'=>$carbon->addDay()->format('Y-m-d'),
+                        'idhermano'=>$idhermano,
+                    ]);
+        $asistencia->estado=$estado;
+        $asistencia->save();
+        return Redirect::to('/asistencias/create');
     }
 }

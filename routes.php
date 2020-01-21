@@ -1,5 +1,3 @@
 <?php
 
-Route::get('/asistencias/register/{estado}', function () {
-    return $estado;
-});
+Route::get('/asistencias/register/{idhermano}/{estado}','LuisMayta\Coordinacion\Components\ObtieneEntidades@RegistrarAsistencia' );
