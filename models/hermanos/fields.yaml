@@ -51,14 +51,8 @@ tabs:
             span: full
             type: textarea
             tab: 'Datos personales'
-        dia_nacimiento:
-            label: Dia
-            span: auto
-            hidden: 1
-            type: text
-            tab: 'Datos personales'
         estado:
-            label: Dropdown
+            label: Estado
             options:
                 asistente: Asistente
                 comprometido: Comprometido
@@ -66,6 +60,12 @@ tabs:
             showSearch: true
             span: auto
             type: dropdown
+            tab: 'Datos personales'
+        dia_nacimiento:
+            label: Dia
+            span: auto
+            hidden: 1
+            type: text
             tab: 'Datos personales'
         foto:
             label: Foto
