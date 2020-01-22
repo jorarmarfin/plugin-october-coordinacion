@@ -23,30 +23,54 @@ class ObtieneEntidades extends ComponentBase
                 'title'             => 'Tabla',
                 'description'       => 'Obtiene los registros de la tabla escogida',
                 'type'              => 'string',
-            ]
+            ],
+            'Paginacion' => [
+                'title'             => 'Paginacion',
+                'description'       => 'Inserte la cantidad de registros si desea paginar',
+                'type'              => 'string',
+            ],
+            'CampoMes' => [
+                'title'             => 'Campo de mes',
+                'description'       => 'Inserte El campo de mes para buscar',
+                'default'       => 'fecha',
+                'type'              => 'string',
+            ],
+            'Orden' => [
+                'title'             => 'Orden',
+                'description'       => 'Campo por el cual ordenara',
+                'default'       => 'dia_nacimiento',
+                'type'              => 'string',
+            ],
         ];
     }
 
-    public function Modelo($paginate=0)
+    public function Modelo()
     {
         $modelo = $this->property('Modelo');
         $instancia = trim("LuisMayta\Coordinacion\Models\ ").$modelo;
         $obj=new $instancia;
-        if ($paginate>0) {
-            return $obj::paginate($paginate);
+
+        $cnt = intval($this->property('Paginacion'));
+
+        if ($cnt>0) {
+            return $obj::paginate($cnt);
         } else {
             return $obj::get();
         }
     }
-    public function ModeloPorMes($t='n',$o='s')
+    public function ModeloPorMes()
     {
         $modelo = $this->property('Modelo');
         $instancia = trim("LuisMayta\Coordinacion\Models\ ").$modelo;
         $obj=new $instancia;
         $mes = date('m');
-        $retVal = ($t=='h') ? 'fecha_nacimiento' : 'fecha' ;
+
+        $retVal = $this->property('CampoMes') ;
         $tmp = $obj::whereMonth($retVal,$mes);
-        if ($o<>'s') $tmp->OrderBy($o);
+
+        $o = $this->property('Orden');
+        $tmp->OrderBy($o);
+
         $data = [
             'data'=>$tmp->get(),
             'mes'=>$tmp->first()
