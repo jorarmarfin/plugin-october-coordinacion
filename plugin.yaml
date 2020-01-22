@@ -38,3 +38,7 @@ navigation:
                 label: Asistencias
                 url: luismayta/coordinacion/asistenciascontroller
                 icon: icon-adn
+            side-menu-item8:
+                label: Servicios
+                url: luismayta/coordinacion/servicioscontroller
+                icon: icon-sitemap

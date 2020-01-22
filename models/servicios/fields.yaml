@@ -1,0 +1,10 @@
+fields:
+    nombre:
+        label: Nombre
+        span: left
+        type: text
+    descripcion:
+        label: Descripción
+        size: large
+        span: full
+        type: richeditor

@@ -1,0 +1,10 @@
+name: ServiciosController
+form: $/luismayta/coordinacion/models/servicios/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Servicios
+defaultRedirect: luismayta/coordinacion/servicioscontroller
+create:
+    redirect: 'luismayta/coordinacion/servicioscontroller/update/:id'
+    redirectClose: luismayta/coordinacion/servicioscontroller
+update:
+    redirect: luismayta/coordinacion/servicioscontroller
+    redirectClose: luismayta/coordinacion/servicioscontroller

@@ -38,7 +38,7 @@ class ObtieneEntidades extends ComponentBase
             return $obj::get();
         }
     }
-    public function ModeloPorMes($t='n')
+    public function ModeloPorMes($t='n',$o='s')
     {
         $modelo = $this->property('Modelo');
         $instancia = trim("LuisMayta\Coordinacion\Models\ ").$modelo;
@@ -46,6 +46,7 @@ class ObtieneEntidades extends ComponentBase
         $mes = date('m');
         $retVal = ($t=='h') ? 'fecha_nacimiento' : 'fecha' ;
         $tmp = $obj::whereMonth($retVal,$mes);
+        if ($o<>'s') $tmp->OrderBy($o);
         $data = [
             'data'=>$tmp->get(),
             'mes'=>$tmp->first()

@@ -10,5 +10,5 @@ Route::get('test',function(){
     $carbon = Carbon::create();
     $dt = new Carbon($fecha);
     
-    dd($dt->format('D'));
+    dd($dt->format('d'));
 });

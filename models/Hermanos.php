@@ -129,5 +129,11 @@ class Hermanos extends Model
         $retVal = (is_null($asistencia)) ? '---' : $asistencia->estado;
         return $retVal;
     }
+    public function setFechaNacimientoAttribute($value)
+    {
+        $this->attributes['fecha_nacimiento'] = $value;
+        $dt = new Carbon($value);
+        $this->attributes['dia_nacimiento'] = $dt->format('d');
+    }
 
 }

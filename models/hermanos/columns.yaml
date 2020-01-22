@@ -11,3 +11,9 @@ columns:
     fecha_nacimiento:
         label: 'Fecha nacimiento'
         type: date
+        searchable: true
+    estado:
+        label: Estado
+        type: text
+        searchable: true
+        sortable: true
