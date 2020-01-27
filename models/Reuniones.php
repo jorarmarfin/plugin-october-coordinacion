@@ -15,7 +15,7 @@ class Reuniones extends Model
      * Remove this line if timestamps are defined in the database table.
      */
     public $timestamps = false;
-
+    protected $guarded = [];
 
     /**
      * @var string The database table used by the model.

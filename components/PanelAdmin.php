@@ -1,6 +1,8 @@
 <?php namespace LuisMayta\Coordinacion\Components;
 
 use Cms\Classes\ComponentBase;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use LuisMayta\Coordinacion\Models\Sabado;
 use LuisMayta\Coordinacion\Models\Eventos;
 use LuisMayta\Coordinacion\Models\Hermanos;
@@ -34,5 +36,16 @@ class PanelAdmin extends ComponentBase
             'eventos'=>$eventos,
         ];
         return $data;
+    }
+    public function Actualiza()
+    {
+        $data = Input::all();
+        Reuniones::create([
+            'tipo'=>Input::get('tipo'),
+            'fecha'=>Input::get('fecha'),
+            'asunto'=>Input::get('asunto'),
+            'descripcion'=>Input::get('descripcion'),
+        ]);
+        return Redirect::to('reuniones/');
     }
 }
