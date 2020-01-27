@@ -38,7 +38,7 @@ class ObtieneEntidades extends ComponentBase
             'Orden' => [
                 'title'             => 'Orden',
                 'description'       => 'Campo por el cual ordenara',
-                'default'       => 'dia_nacimiento',
+                'default'       => 'id',
                 'type'              => 'string',
             ],
         ];
