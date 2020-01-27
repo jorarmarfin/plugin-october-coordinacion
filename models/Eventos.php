@@ -103,4 +103,11 @@ class Eventos extends Model
         
         return $dia.' '.$dt->day;
     }
-}
+    /**
+     * Query Scope
+     */
+    public function scopeEventosMes($query)
+    {
+        $mes = date('m');
+        return $query->whereMonth('fecha',$mes)->orderBy('fecha','asc');
+    }}

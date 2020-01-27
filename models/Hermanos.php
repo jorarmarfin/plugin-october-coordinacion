@@ -135,5 +135,12 @@ class Hermanos extends Model
         $dt = new Carbon($value);
         $this->attributes['dia_nacimiento'] = $dt->format('d');
     }
-
+    /**
+     * Query Scope
+     */
+    public function scopeUltimoCumple($query)
+    {
+        $mes = date('m');
+        return $query->whereMonth('fecha_nacimiento',$mes)->orderBy('dia_nacimiento','desc');
+    }
 }

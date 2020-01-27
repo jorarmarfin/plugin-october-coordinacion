@@ -18,6 +18,7 @@ class Plugin extends PluginBase
         return [
             'LuisMayta\Coordinacion\Components\ObtieneEntidades' => 'ObtieneEntidades',
             'LuisMayta\Coordinacion\Components\DetalleEntidades' => 'DetalleEntidades',
+            'LuisMayta\Coordinacion\Components\PanelAdmin' => 'PanelAdmin',
         ];
     }
 

@@ -3,8 +3,20 @@ fields:
         label: Nombre
         span: left
         type: text
+    responsable:
+        label: Responsable
+        span: auto
+        type: text
     descripcion:
         label: Descripción
         size: large
         span: full
         type: richeditor
+    integrantes:
+        label: Integrantes
+        mode: string
+        separator: comma
+        customTags: true
+        useKey: false
+        span: auto
+        type: taglist

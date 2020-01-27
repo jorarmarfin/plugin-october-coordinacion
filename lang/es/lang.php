@@ -14,5 +14,9 @@
     'detalle_entidades'=>[
         'de_name' => 'Detalle de modelos',
         'de_desc' => 'Muestra el detalle de un registro'
+    ],
+    'panel_admin'=>[
+        'de_name' => 'Panel admin',
+        'de_desc' => 'Muestra el panel de administracio'
     ]
 ];

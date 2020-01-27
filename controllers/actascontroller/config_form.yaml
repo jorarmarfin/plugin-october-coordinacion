@@ -1,0 +1,10 @@
+name: ActasController
+form: $/luismayta/coordinacion/models/actas/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Actas
+defaultRedirect: luismayta/coordinacion/actascontroller
+create:
+    redirect: 'luismayta/coordinacion/actascontroller/update/:id'
+    redirectClose: luismayta/coordinacion/actascontroller
+update:
+    redirect: luismayta/coordinacion/actascontroller
+    redirectClose: luismayta/coordinacion/actascontroller

@@ -1,0 +1,16 @@
+fields:
+    fecha:
+        label: Fecha
+        mode: date
+        span: auto
+        type: datepicker
+    acuerdos:
+        label: Acuerdos
+        size: large
+        span: full
+        type: richeditor
+    asistentes:
+        label: Asistentes
+        size: large
+        span: full
+        type: textarea

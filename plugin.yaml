@@ -42,3 +42,7 @@ navigation:
                 label: Servicios
                 url: luismayta/coordinacion/servicioscontroller
                 icon: icon-sitemap
+            side-menu-item9:
+                label: Actas
+                url: luismayta/coordinacion/actascontroller
+                icon: icon-book

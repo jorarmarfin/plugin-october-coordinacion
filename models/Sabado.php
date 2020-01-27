@@ -103,4 +103,12 @@ class Sabado extends Model
         
         return $dia.' '.$dt->day;
     }
+    /**
+     * Query Scope
+     */
+    public function scopeReunionMes($query)
+    {
+        $mes = date('m');
+        return $query->whereMonth('fecha',$mes)->orderBy('fecha','asc');
+    }
 }

@@ -2,3 +2,8 @@ columns:
     nombre:
         label: 'Nombre del servicio'
         type: text
+        searchable: true
+    responsable:
+        label: Responsable
+        type: text
+        searchable: true

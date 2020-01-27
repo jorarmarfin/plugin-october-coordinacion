@@ -1,0 +1,5 @@
+columns:
+    fecha:
+        label: Fecha
+        type: date
+        searchable: true
