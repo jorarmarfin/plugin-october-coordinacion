@@ -72,3 +72,6 @@
 1.0.25:
     - 'Updated table luismayta_coordinacion_servicios'
     - builder_table_update_luismayta_coordinacion_servicios_2.php
+1.0.26:
+    - 'Updated table luismayta_coordinacion_hermanos'
+    - builder_table_update_luismayta_coordinacion_hermanos_5.php

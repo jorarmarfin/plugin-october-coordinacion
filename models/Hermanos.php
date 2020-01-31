@@ -134,6 +134,7 @@ class Hermanos extends Model
         $this->attributes['fecha_nacimiento'] = $value;
         $dt = new Carbon($value);
         $this->attributes['dia_nacimiento'] = $dt->format('d');
+        $this->attributes['mes_nacimiento'] = $dt->format('m');
     }
     /**
      * Query Scope
@@ -143,4 +144,9 @@ class Hermanos extends Model
         $mes = date('m');
         return $query->whereMonth('fecha_nacimiento',$mes)->orderBy('dia_nacimiento','desc');
     }
+    public function scopeBirthDays($query)
+    {
+        return $query->orderBy('mes_nacimiento','asc')->orderBy('dia_nacimiento','asc');
+    }
+ 
 }
