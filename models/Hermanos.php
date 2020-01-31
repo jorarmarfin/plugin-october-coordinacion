@@ -133,8 +133,10 @@ class Hermanos extends Model
     {
         $this->attributes['fecha_nacimiento'] = $value;
         $dt = new Carbon($value);
-        $this->attributes['dia_nacimiento'] = $dt->format('d');
-        $this->attributes['mes_nacimiento'] = $dt->format('m');
+        $d = $dt->format('d');
+        $m = $dt->format('m');
+        $fecha = "2020-{$m}-{$d}";
+        $this->attributes['fecha_orden'] = $value;
     }
     /**
      * Query Scope
@@ -142,11 +144,13 @@ class Hermanos extends Model
     public function scopeUltimoCumple($query)
     {
         $mes = date('m');
-        return $query->whereMonth('fecha_nacimiento',$mes)->orderBy('dia_nacimiento','desc');
+        return $query->whereMonth('fecha_nacimiento',$mes)->orderBy('fecha_orden','desc');
     }
     public function scopeBirthDays($query)
     {
-        $date = date('y-m-d');
-        return $query->whereDate('fecha_nacimiento','>=',$date)->orderBy('mes_nacimiento','asc')->orderBy('dia_nacimiento','asc');
+        $d = date('d');
+        $m = date('m');
+        $date = "2020-{$m}-{$d}";
+        return $query->whereDate('fecha_orden','>=',$date)->orderBy('fecha_orden','asc');
     } 
 }

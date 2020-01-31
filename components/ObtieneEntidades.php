@@ -90,10 +90,6 @@ class ObtieneEntidades extends ComponentBase
         $hermanos = Hermanos::BirthDays()->take(10)->get();
         return $hermanos;
     }
-    public function test()
-    {
-        # code...
-    }
     public function TotalAsistencia()
     {
         $query = "select h.nombres,

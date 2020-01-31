@@ -61,14 +61,8 @@ tabs:
             span: auto
             type: dropdown
             tab: 'Datos personales'
-        dia_nacimiento:
-            label: Dia
-            span: auto
-            hidden: 1
-            type: text
-            tab: 'Datos personales'
-        mes_nacimiento:
-            label: MEs
+        fecha_orden:
+            label: Fechaorden
             span: auto
             hidden: 1
             type: text
