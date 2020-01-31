@@ -21,7 +21,7 @@ class PanelAdmin extends ComponentBase
     public function Panel()
     {
         $mes = date('m');
-        $hermano = Hermanos::UltimoCumple()->first();
+        $hermano = Hermanos::BirthDays()->first();
         $zonal = Reuniones::UltimaReunion('zonal')->first();
         $capilla = Reuniones::UltimaReunion('capilla')->first();
         $servidores = Reuniones::UltimaReunion('servidores')->first();
