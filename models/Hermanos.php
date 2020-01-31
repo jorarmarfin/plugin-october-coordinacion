@@ -146,7 +146,7 @@ class Hermanos extends Model
     }
     public function scopeBirthDays($query)
     {
-        return $query->orderBy('mes_nacimiento','asc')->orderBy('dia_nacimiento','asc');
-    }
- 
+        $date = date('y-m-d');
+        return $query->whereDate('fecha_nacimiento','>=',$date)->orderBy('mes_nacimiento','asc')->orderBy('dia_nacimiento','asc');
+    } 
 }

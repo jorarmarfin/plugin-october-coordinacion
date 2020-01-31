@@ -35,10 +35,16 @@ class ObtieneEntidades extends ComponentBase
                 'default'       => 'fecha',
                 'type'              => 'string',
             ],
+            'CampoOrden' => [
+                'title'             => 'Campo Orden',
+                'description'       => 'Campo por el cual ordenara',
+                'default'       => 'id',
+                'type'              => 'string',
+            ],
             'Orden' => [
                 'title'             => 'Orden',
                 'description'       => 'Campo por el cual ordenara',
-                'default'       => 'id',
+                'default'       => 'asc',
                 'type'              => 'string',
             ],
         ];
@@ -51,11 +57,13 @@ class ObtieneEntidades extends ComponentBase
         $obj=new $instancia;
 
         $cnt = intval($this->property('Paginacion'));
+        $campo_orden = $this->property('CampoOrden');
+        $orden = $this->property('Orden');
 
         if ($cnt>0) {
-            return $obj::paginate($cnt);
+            return $obj::orderBy($campo_orden,$orden)->paginate($cnt);
         } else {
-            return $obj::get();
+            return $obj::orderBy($campo_orden,$orden)->get();
         }
     }
     public function ModeloPorMes()
@@ -80,7 +88,6 @@ class ObtieneEntidades extends ComponentBase
     public function BirthDay()
     {
         $hermanos = Hermanos::BirthDays()->take(10)->get();
-        dd($hermanos);
         return $hermanos;
     }
     public function test()

@@ -25,8 +25,8 @@ class PanelAdmin extends ComponentBase
         $zonal = Reuniones::UltimaReunion('zonal')->first();
         $capilla = Reuniones::UltimaReunion('capilla')->first();
         $servidores = Reuniones::UltimaReunion('servidores')->first();
-        $sabados = Sabado::ReunionMes()->get();
-        $eventos = Eventos::EventosMes()->get();
+        $sabados = Sabado::DesdeHoy('fecha','fecha','asc')->take(10)->get();
+        $eventos = Eventos::DesdeHoy('fecha','fecha','asc')->take(10)->get();
         $data = [
             'cumple'=>$hermano,
             'zonal'=>$zonal,

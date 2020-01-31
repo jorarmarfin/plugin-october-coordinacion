@@ -110,4 +110,13 @@ class Eventos extends Model
     {
         $mes = date('m');
         return $query->whereMonth('fecha',$mes)->orderBy('fecha','asc');
-    }}
+    }
+    public function scopeDesdeHoy($query,$campo,$campo_orden,$orden)
+    {
+        $date = date('y-m-d');
+        return $query->whereDate($campo,'>=',$date)->orderBy($campo_orden,$orden);
+    }
+
+
+
+}
