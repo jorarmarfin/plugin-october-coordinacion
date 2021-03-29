@@ -1,7 +1,8 @@
 <?php namespace LuisMayta\Coordinacion\Controllers;
 
-use Backend\Classes\Controller;
 use BackendMenu;
+use Backend\Classes\Controller;
+use LuisMayta\Coordinacion\Models\Hermanos;
 
 class HermanosController extends Controller
 {
@@ -14,5 +15,30 @@ class HermanosController extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('LuisMayta.Coordinacion', 'main-menu-item');
+    }
+    public function getHermanos()
+    {
+        $h = Hermanos::orderBy('nombres','asc')->get(); 
+        foreach ($h as $key => $item) {
+            
+            $imagen = (isset($item->foto)) ? $item->foto->getPath() : 'noimagen.jpg' ;
+            //$h->imagen = $imagen;
+        }
+        return $h;
+    }
+    public function getCumpleMes()
+    {
+        $h = Hermanos::UltimoCumple()->get(); 
+        foreach ($h as $key => $item) {
+            
+            $imagen = (isset($item->foto)) ? $item->foto->getPath() : 'noimagen.jpg' ;
+            //$h->imagen = $imagen;
+        }
+        return $h;
+    }
+    public function getCumpleanos()
+    {
+        $h = Hermanos::OrderBy('fecha_orden','asc')->get();
+        return $h;
     }
 }

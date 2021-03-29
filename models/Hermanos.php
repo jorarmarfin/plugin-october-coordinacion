@@ -36,6 +36,7 @@ class Hermanos extends Model
     /**
      * Accessors
      */
+
     public function getNombreCompletoAttribute()
     {
         return $this->nombres.' '.$this->apellidos;
@@ -129,6 +130,9 @@ class Hermanos extends Model
         $retVal = (is_null($asistencia)) ? '---' : $asistencia->estado;
         return $retVal;
     }
+    /** 
+     * Mutators
+     */
     public function setFechaNacimientoAttribute($value)
     {
         $this->attributes['fecha_nacimiento'] = $value;
@@ -136,8 +140,9 @@ class Hermanos extends Model
         $d = $dt->format('d');
         $m = $dt->format('m');
         $fecha = "2020-{$m}-{$d}";
-        $this->attributes['fecha_orden'] = $value;
+        $this->attributes['fecha_orden'] = $fecha;
     }
+
     /**
      * Query Scope
      */

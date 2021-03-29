@@ -1,0 +1,10 @@
+name: MensajesController
+form: $/luismayta/coordinacion/models/mensajes/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\Mensajes
+defaultRedirect: luismayta/coordinacion/mensajescontroller
+create:
+    redirect: 'luismayta/coordinacion/mensajescontroller/update/:id'
+    redirectClose: luismayta/coordinacion/mensajescontroller
+update:
+    redirect: luismayta/coordinacion/mensajescontroller
+    redirectClose: luismayta/coordinacion/mensajescontroller

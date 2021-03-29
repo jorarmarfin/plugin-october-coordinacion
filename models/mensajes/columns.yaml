@@ -1,0 +1,7 @@
+columns:
+    titulo:
+        label: Titulo
+        type: text
+    fecha:
+        label: Fecha
+        type: date

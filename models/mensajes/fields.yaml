@@ -1,0 +1,31 @@
+fields:
+    titulo:
+        label: Titulo
+        span: full
+        type: text
+    destacar:
+        label: Destacar
+        span: auto
+        type: switch
+    activo:
+        label: Activo
+        span: auto
+        type: switch
+    fecha:
+        label: Fecha
+        mode: date
+        span: auto
+        type: datepicker
+    tipo:
+        label: Tipo
+        options:
+            success: Normal
+            danger: Urgente
+        showSearch: true
+        span: auto
+        type: dropdown
+    contenido:
+        label: Contenido
+        size: large
+        span: full
+        type: richeditor

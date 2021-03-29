@@ -78,3 +78,18 @@
 1.0.27:
     - 'Updated table luismayta_coordinacion_hermanos'
     - builder_table_update_luismayta_coordinacion_hermanos_6.php
+1.0.28:
+    - 'Created table luismayta_coordinacion_grupo'
+    - builder_table_create_luismayta_coordinacion_grupo.php
+1.0.29:
+    - 'Created table luismayta_coordinacion_mensajes'
+    - builder_table_create_luismayta_coordinacion_mensajes.php
+1.0.30:
+    - 'Updated table luismayta_coordinacion_mensajes'
+    - builder_table_update_luismayta_coordinacion_mensajes.php
+1.0.31:
+    - 'Updated table luismayta_coordinacion_mensajes'
+    - builder_table_update_luismayta_coordinacion_mensajes_2.php
+1.0.32:
+    - 'Updated table luismayta_coordinacion_mensajes'
+    - builder_table_update_luismayta_coordinacion_mensajes_3.php

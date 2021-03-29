@@ -1,0 +1,10 @@
+name: GrupoOracionController
+form: $/luismayta/coordinacion/models/grupooracion/fields.yaml
+modelClass: LuisMayta\Coordinacion\Models\GrupoOracion
+defaultRedirect: luismayta/coordinacion/grupooracioncontroller
+create:
+    redirect: 'luismayta/coordinacion/grupooracioncontroller/update/:id'
+    redirectClose: luismayta/coordinacion/grupooracioncontroller
+update:
+    redirect: luismayta/coordinacion/grupooracioncontroller
+    redirectClose: luismayta/coordinacion/grupooracioncontroller

@@ -57,6 +57,8 @@ tabs:
                 asistente: Asistente
                 comprometido: Comprometido
                 visitante: Visitante
+                servidor: Servidor
+                coordinador: Coordinador
             showSearch: true
             span: auto
             type: dropdown
@@ -65,6 +67,7 @@ tabs:
             label: Fechaorden
             span: auto
             hidden: 1
+            defaultFrom: fecha_nacimiento
             type: text
             tab: 'Datos personales'
         foto:

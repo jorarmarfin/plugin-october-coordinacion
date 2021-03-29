@@ -1,0 +1,20 @@
+fields:
+    nombre:
+        label: 'Nombre del grupo'
+        span: auto
+        type: text
+    fecha_fundacion:
+        label: 'Fecha de fundación'
+        mode: date
+        span: auto
+        type: datepicker
+    historia:
+        label: Historia
+        size: large
+        span: full
+        type: richeditor
+    vision_mision:
+        label: 'Vision y mision'
+        size: large
+        span: full
+        type: richeditor
